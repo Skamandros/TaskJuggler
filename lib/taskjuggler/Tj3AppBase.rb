@@ -40,7 +40,7 @@ class TaskJuggler
       # If stdout is not a tty, we don't use ANSI escape sequences to color
       # the terminal output. Additionally, we have the --no-color option to
       # force colors off in case this does not work properly.
-      Term::ANSIColor.coloring = STDOUT.tty?
+      Term::ANSIColor.coloring = true
 
       # Make sure the MessageHandler is set to default values.
       MessageHandlerInstance.instance.reset
